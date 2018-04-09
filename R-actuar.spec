@@ -4,7 +4,7 @@
 #
 Name     : R-actuar
 Version  : 2.3.1
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/actuar_2.3-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/actuar_2.3-1.tar.gz
 Summary  : Actuarial Functions and Heavy Tailed Distributions
@@ -37,11 +37,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521565899
+export SOURCE_DATE_EPOCH=1523287051
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521565899
+export SOURCE_DATE_EPOCH=1523287051
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
