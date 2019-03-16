@@ -4,16 +4,16 @@
 #
 Name     : R-actuar
 Version  : 2.3.1
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/actuar_2.3-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/actuar_2.3-1.tar.gz
 Summary  : Actuarial Functions and Heavy Tailed Distributions
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-actuar-lib
+Requires: R-actuar-lib = %{version}-%{release}
 Requires: R-expint
 BuildRequires : R-expint
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 modeling of loss distributions; risk theory and ruin theory;
@@ -37,11 +37,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523287051
+export SOURCE_DATE_EPOCH=1552707853
 
 %install
+export SOURCE_DATE_EPOCH=1552707853
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523287051
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -76,8 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library actuar|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  actuar || :
 
 
 %files
@@ -136,7 +135,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/actuar/help/paths.rds
 /usr/lib64/R/library/actuar/html/00Index.html
 /usr/lib64/R/library/actuar/html/R.css
-/usr/lib64/R/library/actuar/libs/symbols.rds
 /usr/lib64/R/library/actuar/po/en@quot/LC_MESSAGES/R-actuar.mo
 /usr/lib64/R/library/actuar/po/en@quot/LC_MESSAGES/actuar.mo
 /usr/lib64/R/library/actuar/po/fr/LC_MESSAGES/R-actuar.mo
