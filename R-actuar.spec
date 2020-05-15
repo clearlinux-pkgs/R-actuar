@@ -4,7 +4,7 @@
 #
 Name     : R-actuar
 Version  : 2.3.3
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/actuar_2.3-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/actuar_2.3-3.tar.gz
 Summary  : Actuarial Functions and Heavy Tailed Distributions
@@ -16,8 +16,10 @@ BuildRequires : R-expint
 BuildRequires : buildreq-R
 
 %description
-# actuar
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/actuar)](https://cran.r-project.org/package=actuar) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/actuar)
+modeling of loss distributions; risk theory and ruin theory;
+  simulation of compound models, discrete mixtures and compound
+  hierarchical models; credibility theory. Support for many additional
+  probability distributions to model insurance loss amounts and loss
 
 %package lib
 Summary: lib components for the R-actuar package.
@@ -29,21 +31,22 @@ lib components for the R-actuar package.
 
 %prep
 %setup -q -c -n actuar
+cd %{_builddir}/actuar
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575562257
+export SOURCE_DATE_EPOCH=1589569018
 
 %install
-export SOURCE_DATE_EPOCH=1575562257
+export SOURCE_DATE_EPOCH=1589569018
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
