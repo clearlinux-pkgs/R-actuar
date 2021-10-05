@@ -1,5 +1,5 @@
 PKG_NAME := R-actuar
-URL = https://cran.r-project.org/src/contrib/actuar_3.1-4.tar.gz
+URL = https://cran.r-project.org/src/contrib/actuar_3.2-0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
