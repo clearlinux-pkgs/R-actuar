@@ -4,7 +4,7 @@
 #
 Name     : R-actuar
 Version  : 3.3.1
-Release  : 61
+Release  : 62
 URL      : https://cran.r-project.org/src/contrib/actuar_3.3-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/actuar_3.3-1.tar.gz
 Summary  : Actuarial Functions and Heavy Tailed Distributions
