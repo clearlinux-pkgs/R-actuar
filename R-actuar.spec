@@ -6,10 +6,10 @@
 # autospec commit: 250a666
 #
 Name     : R-actuar
-Version  : 3.3.3
-Release  : 69
-URL      : https://cran.r-project.org/src/contrib/actuar_3.3-3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/actuar_3.3-3.tar.gz
+Version  : 3.3.4
+Release  : 70
+URL      : https://cran.r-project.org/src/contrib/actuar_3.3-4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/actuar_3.3-4.tar.gz
 Summary  : Actuarial Functions and Heavy Tailed Distributions
 Group    : Development/Tools
 License  : GPL-2.0+
@@ -43,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1698186484
+export SOURCE_DATE_EPOCH=1699460850
 
 %install
-export SOURCE_DATE_EPOCH=1698186484
+export SOURCE_DATE_EPOCH=1699460850
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
